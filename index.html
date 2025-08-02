@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="screen_container">
+            <div class="main_screen_part">
+                <div id="desktop">
+                    <div class="desktop-icon" data-app="recycle-bin">
+                        <img src="./assets/recycle-bin.png" alt="Recycle Bin" />
+                        <div class="icon-label" contenteditable="false">Recycle Bin</div>
+                    </div>
+
+                    <div class="desktop-icon" data-app="my-computer">
+                        <img src="./assets/my-computer.png" alt="My PC" />
+                        <div class="icon-label" contenteditable="false">My PC</div>
+                    </div>
+
+                    <div class="desktop-icon" data-app="notepad">
+                        <img src="./assets/notepad.png" alt="Notepad" />
+                        <div class="icon-label" contenteditable="false">Notepad</div>
+                    </div>
+
+                    <div class="desktop-icon" data-app="commandprompt">
+                        <img src="./assets/commandprompt.png" alt="commandprompt" />
+                        <div class="icon-label" contenteditable="false">CMD</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TASKBAR UI -->
+            <div class="taskbar_part">
+                <div class="taskbar_container">
+                    <div>&nbsp;</div>
+                    <div class="taskbar_items_list">
+                        <ul class="taskbar_items">
+                            <li><img class="window-icon" src="./assets/window_icon.png" alt=""></li>
+                            <li>
+                                <input class="taskbar_searchbar" type="search" name="search" placeholder="🔍 Search"
+                                    id="">
+                            </li>
+                            <li class="featured-icons">
+                                <div id="taskbar-item-1" data-app="google" class="taskbar-item">
+                                    <div class="glass-wrapper">
+                                        <img class="mini-icon" src="./assets/google-icon.png" id="google-icon" />
+                                    </div>
+                                    <div class="tooltip">Google</div>
+                                </div>
+
+                                <div id="taskbar-item-2" data-app="vscode" class="taskbar-item">
+                                    <div class="glass-wrapper">
+                                        <img class="mini-icon" src="./assets/vscode.png" id="vscode-icon" />
+                                    </div>
+                                    <div class="tooltip">VS Code</div>
+                                </div>
+
+                                <div id="taskbar-item-3" data-app="telegram" class="taskbar-item">
+                                    <div class="glass-wrapper">
+                                        <img class="mini-icon" src="./assets/telegram.png" id="telegram-icon" />
+                                    </div>
+                                    <div class="tooltip">Telegram</div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="taskbar_items_list_3">
+                        <div style="text-align: center;">
+                            <p>ENG</p>
+                            <p>IN</p>
+                        </div>
+                        <div id="quick-settings-trigger" class="taskbar_date_time">
+                            <ul>
+                                <li>
+                                    <img class="icons wifi" src="./assets/wifi-signal.png" alt="">
+                                </li>
+                                <li>
+                                    <img class="icons audio" src="./assets/audio-svgrepo-com.png" alt="">
+                                </li>
+                                <li>
+                                    <img class="icons battery" src="./assets/battery-full-svgrepo-com.svg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="taskbar_date_time" id="clock-box">
+                            <p id="time" class="time" style="text-align: right;"></p>
+                            <p id="date"></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Calendar + Notification Wrapper -->
+    <div id="calendar-notification-wrapper">
+        <div id="notification-box">
+            <p>No Notifications</p>
+        </div>
+
+        <div id="calendar-widget">
+            <div class="calendar-header">
+                <button id="prev-month">◀</button>
+                <span id="calendar-month-year">Month Year</span>
+                <button id="next-month">▶</button>
+            </div>
+            <table class="calendar-table" id="calendar-table"></table>
+        </div>
+    </div>
+
+    <div id="quick-settings-panel" class="quick-settings-hidden">
+        <div class="qs-toggles">
+            <div class="qs-tile" data-type="wifi">
+                <div class="qs-icon">
+                    <img src="./assets/wifi-signal.png" alt="WiFi" />
+                </div>
+                <span>Wi-Fi</span>
+            </div>
+
+            <div class="qs-tile" data-type="bluetooth">
+                <div class="qs-icon">
+                    <img src="./assets/bluetooth-on-svgrepo-com.svg" alt="Bluetooth" />
+                </div>
+                <span>Bluetooth</span>
+            </div>
+
+            <div class="qs-tile" data-type="airplane">
+                <div class="qs-icon">
+                    <img src="./assets/airplane-mode-svgrepo-com.svg" alt="Airplane Mode" />
+                </div>
+                <span>Airplane</span>
+            </div>
+
+            <div class="qs-tile" data-type="accessibility">
+                <div class="qs-icon">
+                    <img src="./assets/accessibility-outline-svgrepo-com.svg" alt="Accessibility" />
+                </div>
+                <span>Accessibility</span>
+            </div>
+
+            <div class="qs-tile" data-type="energy">
+                <div class="qs-icon">
+                    <img src="./assets/battery-saver-svgrepo-com.svg" alt="Energy Saver" />
+                </div>
+                <span>Energy Saver</span>
+            </div>
+
+            <div class="qs-tile" data-type="night-light">
+                <div class="qs-icon">
+                    <img src="./assets/night-light-svgrepo-com.svg" alt="Night Light" />
+                </div>
+                <span>Night Light</span>
+            </div>
+        </div>
+
+
+        <div class="qs-sliders">
+            <div class="slider-box">
+                <img src="./assets/audio-svgrepo-com.png" alt="Volume" class="slider-icon" />
+                <input type="range" id="volume" min="0" max="100" value="50" />
+            </div>
+
+            <div class="slider-box">
+                <img src="./assets/sun-svgrepo-com.svg" alt="Brightness" id="brightness" class="slider-icon" />
+                <input type="range" id="brightness-ctrl" min="30" max="150" value="100" />
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 45px;">
+            <div style="display: flex; align-items: center; gap: 5px;"><img src="./assets/battery-full-svgrepo-com.svg"
+                    class="slider-icon" alt="">
+                <p>100%</p>
+            </div>
+            <div><img src="./assets/settings-svgrepo-com.svg" class="slider-icon" alt=""></div>
+        </div>
+
+    </div>
+
+    <!-- Context Menu -->
+    <div id="context-menu" class="context-menu hidden">
+        <ul>
+            <li id="refresh">🔄 Refresh</li>
+            <li id="new-folder">📁 New Folder</li>
+            <li id="display-settings">🖥️ Display Settings</li>
+            <li id="paste">🪦 Paste</li>
+            <li id="personalize">🎨 Change Wallpaper</li>
+        </ul>
+    </div>
+
+    <!-- Icons Context Menu -->
+    <div id="icon-context-menu" class="hidden context-menu">
+        <ul>
+            <li id="rename-icon">Rename</li>
+            <li id="cut-icon">Cut</li>
+            <li id="delete-icon">Delete</li>
+        </ul>
+    </div>
+
+
+
+
+
+    <!-- <script async src="https://cse.google.com/cse.js?cx=f235d173b09934b7f"></script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
